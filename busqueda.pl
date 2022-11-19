@@ -42,7 +42,7 @@ if($opcion eq "Nombre"){
 }else{
 
 }
-sub imprimirCabezera{
+sub imprimirCabecera{
     open(IN,"UniversidadesLicenciadas.csv") or die"ERROR";
     print <IN>;
      close (IN);
