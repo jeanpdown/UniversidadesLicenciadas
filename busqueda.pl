@@ -75,7 +75,10 @@ sub imprimirResultados{
     my @columnas;
     open(IN,"UniversidadesLicenciadas.csv") or die"ERROR";
     while(my $line = <IN>){
-             if($line =~ /$expresion/){   
+
+            $line =~ tr/ÁÉÍÓÚ/AEIOU/;
+
+            if($line =~ /$expresion/){
                 $encontrado=1;
                 @columnas=split("\\|",$line);
                 print <<HTML;
