@@ -42,4 +42,10 @@ body{
     width: 60px;
     height: 30px;
     align-self: start;
+    border-radius: 6px;
+    border: 1px solid black;
+}
+.formulario-enviar:hover{
+    background-color: #333333;
+    color: white;
 }
