@@ -24,7 +24,19 @@ my $opcion=$q->param("opcion");
 generadorExpresionRegular(2,$busqueda);
 
 if($opcion eq "Nombre"){
+    
     #imprimirResultados(1,$busqueda);
+}elsif($opcion eq "Periodo"){
+
+
+}elsif($opcion eq "DepLocal"){
+
+    
+}elsif($opcion eq "DenoPrograma"){
+
+    
+}else{
+
 }
 
 
