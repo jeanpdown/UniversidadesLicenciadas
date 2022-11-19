@@ -16,3 +16,12 @@ print <<HTML;
 <body>
     <div >
 HTML
+
+
+
+sub imprimirResultados{
+    my $columna=$_[0];
+    my $busqueda=$_[1];
+
+
+}
