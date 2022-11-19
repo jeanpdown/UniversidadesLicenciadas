@@ -8,16 +8,16 @@
     <title>Document</title>
 </head>
 <body>
-    <h1>Busqueda de universidades Licenciadas</h1>
-    <form action="busqueda.pl" method="get">
-        <input type="text" name="busqueda">
-        <select name="opcion" id="">
+    <h1 class="titulo">Busqueda de universidades Licenciadas</h1>
+    <form action="busqueda.pl" method="get" class="formulario">
+        <input type="text" name="busqueda" class="formulario-entrada">
+        <select name="opcion" id="" class="formulario-seleccionador">
             <option value="Nombre">Nombre Universidad</option>
             <option value="Periodo">Periodo Licenciamiento</option>
             <option value="DepLocal">Departamento Local</option>
             <option value="DenoPrograma">Denominacion Programa</option>
         </select>
-        <input value="buscar" type="submit">
+        <input value="buscar" type="submit" class="formulario-enviar">
     </form>
 </body>
 </html>
