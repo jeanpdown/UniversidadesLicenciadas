@@ -20,8 +20,9 @@ HTML
 my $q =CGI->new;
 my $busqueda=$q->param("busqueda");
 my $opcion=$q->param("opcion");
+print "opcion: $opcion";
 
-if($opcion eq "Nombre Universidad"){
+if($opcion eq "Nombre"){
     imprimirResultados(2,$busqueda);
 }
 
