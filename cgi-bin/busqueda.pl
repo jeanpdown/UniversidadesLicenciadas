@@ -30,27 +30,27 @@ my $encontrado;
 
 $busqueda = uc $busqueda;
 
-if($opcion eq "Nombre"){
+if($opcion eq "Nombre" && !($busqueda eq "")){
 
     $expresion=generadorExpresionRegular(2,$busqueda);
     imprimirResultados($expresion);
-}elsif($opcion eq "Periodo"){
+}elsif($opcion eq "Periodo" && !($busqueda eq "")){
 
     $expresion=generadorExpresionRegular(5,$busqueda);
     imprimirResultados($expresion);
 
-}elsif($opcion eq "DepLocal"){
+}elsif($opcion eq "DepLocal" && !($busqueda eq "")){
 
     $expresion=generadorExpresionRegular(11,$busqueda);
     imprimirResultados($expresion);
     
-}elsif($opcion eq "DenoPrograma"){
+}elsif($opcion eq "DenoPrograma" && !($busqueda eq "")){
 
     $expresion=generadorExpresionRegular(17,$busqueda);
     imprimirResultados($expresion);
     
 }else{
-    print "ERROR";
+    print "<h1>Escriba almenos un digito</h1>";
 }
 
 
