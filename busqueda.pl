@@ -50,6 +50,9 @@ if($opcion eq "Nombre"){
 }
 
 
+if(!defined($encontrado)){
+    print "<h1>No encontrado</h1>\n";
+}
 
 
 sub obtenerCabecera{
@@ -61,7 +64,6 @@ sub obtenerCabecera{
     close (IN);
     return @columnas;
 }
-
 
 
 
