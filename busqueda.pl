@@ -24,7 +24,7 @@ my $expresion;
 
 
 if($opcion eq "Nombre"){
-    imprimirCabezera();
+    imprimirCabecera();
     $expresion=generadorExpresionRegular(2,$busqueda);
     imprimirResultados($expresion);
 }elsif($opcion eq "Periodo"){
@@ -44,8 +44,9 @@ if($opcion eq "Nombre"){
 }
 sub imprimirCabecera{
     open(IN,"UniversidadesLicenciadas.csv") or die"ERROR";
-    print <IN>;
-     close (IN);
+    my @lines=  <IN>;
+    print $lines[0];
+    close (IN);
 }
 
 sub imprimirResultados{
