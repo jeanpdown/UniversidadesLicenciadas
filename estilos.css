@@ -9,3 +9,19 @@ body{
     flex-direction: column;
     overflow: hidden;
 }
+
+.titulo{
+    color: white;
+    font-size: 5em;;
+}
+.formulario-entrada{
+    height: 30px;
+    border-radius: 5px;
+    width: 400px;
+}
+.formulario-seleccionador{
+    height: 30px;
+    border-radius: 5px;
+    text-align: center;
+    
+}
