@@ -40,8 +40,11 @@ if($opcion eq "Nombre"){
     imprimirResultados($expresion);
     
 }else{
-
+    print "ERROR";
 }
+
+
+
 sub imprimirCabecera{
     open(IN,"UniversidadesLicenciadas.csv") or die"ERROR";
     my @lines=  <IN>;
@@ -59,7 +62,7 @@ sub imprimirResultados{
                  print $line;
              }
          }
-     close (IN);
+    close (IN);
 }
 
 sub generadorExpresionRegular{
