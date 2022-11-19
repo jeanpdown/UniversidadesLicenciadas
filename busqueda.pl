@@ -20,27 +20,24 @@ HTML
 my $q =CGI->new;
 my $busqueda=$q->param("busqueda");
 my $opcion=$q->param("opcion");
-print "opcion: $opcion";
+
 
 if($opcion eq "Nombre"){
-    imprimirResultados(2,$busqueda);
+
+    imprimirResultados(1,$busqueda);
 }
 
-print "opcion :$opcion\n";
-print "busqueda:$busqueda\n";
 
 sub imprimirResultados{
     my $columna=$_[0];
     my $busq=$_[1];
+    print "la busqueda es $busq";
     open(IN,"UniversidadesLicenciadas.csv") or die"ERROR";
 
         while(my $line = <IN>){
-            if($line =~ /^([^\|]+)\|([^\|]+)\|([^\|]+)\|([^\|]+)\|([^\|]+)\|([^\|]+)\|([^\|]+)\|([^\|]+)\|([^\|]+)\|([^\|]+)\|([^\|]+)\|([^\|]+)\|([^\|]+)\|([^\|]+)\|([^\|]+)\|([^\|]+)\|([^\|]+)\|([^\|]+)\|([^\|]+)\|([^\|]+)\|([^\|]+)\|([^\|]+)\|(.+)/){
-                if($$columna =~ /$busq/){
-                    print $line;
-
-                }
+            if($line =~ /^([^\|]+)\|(.*$busq.*)\|(.+)/){   #([^\|]+)
+                print $line;
             }
         }
-    close(IN);
+    close (IN);
 }
