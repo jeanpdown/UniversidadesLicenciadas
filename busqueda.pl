@@ -23,7 +23,6 @@ my $opcion=$q->param("opcion");
 
 
 if($opcion eq "Nombre"){
-
     imprimirResultados(1,$busqueda);
 }
 
