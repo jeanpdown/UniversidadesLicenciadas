@@ -26,6 +26,8 @@ my $encontrado;
 
 @cabeceras=obtenerCabecera();
 
+$busqueda = uc $busqueda;
+
 if($opcion eq "Nombre"){
 
     $expresion=generadorExpresionRegular(2,$busqueda);
