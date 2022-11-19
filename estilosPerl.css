@@ -1,15 +1,12 @@
-body{
-    width: 200vw;
-    
-}
+
 .contenedor-busqueda{
-    width: 200vw;
+    width: 100vw;
     display: grid;
     grid-template-columns: repeat(auto-fill,minmax(500px,1fr));
     gap: 30px;
 }
 .contenedor-resultados{
-    border-bottom: 2px solid black;
-    border-right: 2px solid black;
-    box-shadow: 13px 13px 12px #000;
+    background-image: url(fondo-perl.jpeg);
+    border: 2px solid black;
+    padding: 20px;
 }
