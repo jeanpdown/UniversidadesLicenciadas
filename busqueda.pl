@@ -28,15 +28,15 @@ if($opcion eq "Nombre"){
     $expresion=generadorExpresionRegular(2,$busqueda);
     imprimirResultados($expresion);
 }elsif($opcion eq "Periodo"){
-    $expresion=generadorExpresionRegular(2,$busqueda);
+    $expresion=generadorExpresionRegular(5,$busqueda);
     imprimirResultados($expresion);
 
 }elsif($opcion eq "DepLocal"){
-    $expresion=generadorExpresionRegular(2,$busqueda);
+    $expresion=generadorExpresionRegular(11,$busqueda);
     imprimirResultados($expresion);
     
 }elsif($opcion eq "DenoPrograma"){
-    $expresion=generadorExpresionRegular(2,$busqueda);
+    $expresion=generadorExpresionRegular(17,$busqueda);
     imprimirResultados($expresion);
     
 }else{
