@@ -9,7 +9,11 @@ body{
     flex-direction: column;
     overflow: hidden;
 }
-
+.formulario{
+    display: flex;
+    align-items: center;
+    gap: 30px;
+}
 .titulo{
     color: white;
     font-size: 5em;;
@@ -18,10 +22,24 @@ body{
     height: 30px;
     border-radius: 5px;
     width: 400px;
+    
 }
 .formulario-seleccionador{
+    display: flex;
+    flex-direction: row;
     height: 30px;
     border-radius: 5px;
     text-align: center;
-    
+    white-space: wrap;
+}
+.contenedor-busqueda{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    align-items: center;
+}
+.formulario-enviar{
+    width: 60px;
+    height: 30px;
+    align-self: start;
 }
