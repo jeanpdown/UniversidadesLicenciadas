@@ -1,3 +1,6 @@
 body{
-    background: href();
+    background-image: url("img-portada.jpeg");
+    background-size: cover;
+    height: 100vh;
+    width: 100vw;
 }
