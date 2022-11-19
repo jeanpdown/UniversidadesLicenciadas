@@ -51,7 +51,7 @@ if($opcion eq "Nombre"){
 
 
 if(!defined($encontrado)){
-    print "<h1>No encontrado</h1>\n";
+    print "<h1 class='error'>No encontrado</h1>\n";
 }
 
 
