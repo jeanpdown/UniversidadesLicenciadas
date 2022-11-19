@@ -14,7 +14,7 @@ print <<HTML;
     <title>Búsquedas Universidades Licenciadas </title>
 </head>
 <body>
-    <div >
+    <div class="contenedor-busqueda">
 HTML
 
 my $q =CGI->new;
