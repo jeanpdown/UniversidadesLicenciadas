@@ -78,7 +78,7 @@ sub generadorExpresionRegular{
 
     }
     
-    $expresion.="(.*$busq.*)\\|(.+)";
+    $expresion.="([^\\|]*$busq\[^\\|]*)\\|(.+)";
 
     return $expresion;
 }
