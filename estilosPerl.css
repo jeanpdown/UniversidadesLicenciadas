@@ -1,4 +1,6 @@
-
+body{
+    background-image: url("img-portada.jpeg");
+}
 .contenedor-busqueda{
     width: 100vw;
     display: grid;
