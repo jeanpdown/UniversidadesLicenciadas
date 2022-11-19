@@ -22,6 +22,7 @@ HTML
 sub imprimirResultados{
     my $columna=$_[0];
     my $busqueda=$_[1];
+    open(IN,"UniversidadesLicenciadas.csv") or die"ERROR";
 
-
+    close(IN);
 }
