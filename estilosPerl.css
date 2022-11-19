@@ -1,6 +1,11 @@
-head{
+body{
     width: 200vw;
+    
 }
-.contenedorBusqueda{
+.contenedor-busqueda{
     width: 200vw;
+
+}
+.contenedor-resultados{
+    display: flex;
 }

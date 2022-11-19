@@ -48,25 +48,55 @@ if($opcion eq "Nombre"){
 
 
 
+
 sub imprimirCabecera{
     open(IN,"UniversidadesLicenciadas.csv") or die"ERROR";
     my @lines=  <IN>;
+    print <<HTML;
+                <div class="contenedor-resultados">
+HTML
+
     print $lines[0];
+    print <<HTML;
+                </div>
+HTML
     close (IN);
 }
 
+
+
+
+
 sub imprimirResultados{
     my $expresion=$_[0];
-    
+    my @columnas;
     open(IN,"UniversidadesLicenciadas.csv") or die"ERROR";
-    print "expre $expresion\n";
     while(my $line = <IN>){
              if($line =~ /$expresion/){   #([^\|]+)
-                 print $line;
+                @columnas=split("\\|",$line);
+                print <<HTML;
+                    <div class="contenedor-resultados">
+HTML
+                foreach my $element (@columnas){
+                    print <<HTML;
+                    <div >
+HTML
+                    print $element;
+                    print <<HTML;
+                    </div>
+HTML
+
+                }
+                print <<HTML;
+                    </div>
+HTML
              }
+
          }
     close (IN);
 }
+
+
 
 sub generadorExpresionRegular{
     my $columna=$_[0];
