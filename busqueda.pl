@@ -21,24 +21,27 @@ my $q =CGI->new;
 my $busqueda=$q->param("busqueda");
 my $opcion=$q->param("opcion");
 my $expresion;
+my @cabeceras;
 
+
+@cabeceras=obtenerCabecera();
 
 if($opcion eq "Nombre"){
-    imprimirCabecera();
+
     $expresion=generadorExpresionRegular(2,$busqueda);
     imprimirResultados($expresion);
 }elsif($opcion eq "Periodo"){
-    imprimirCabecera();
+
     $expresion=generadorExpresionRegular(5,$busqueda);
     imprimirResultados($expresion);
 
 }elsif($opcion eq "DepLocal"){
-    imprimirCabecera();
+
     $expresion=generadorExpresionRegular(11,$busqueda);
     imprimirResultados($expresion);
     
 }elsif($opcion eq "DenoPrograma"){
-    imprimirCabecera();
+
     $expresion=generadorExpresionRegular(17,$busqueda);
     imprimirResultados($expresion);
     
@@ -49,18 +52,14 @@ if($opcion eq "Nombre"){
 
 
 
-sub imprimirCabecera{
+sub obtenerCabecera{
     open(IN,"UniversidadesLicenciadas.csv") or die"ERROR";
-    my @lines=  <IN>;
-    print <<HTML;
-                <div class="contenedor-resultados">
-HTML
 
-    print $lines[0];
-    print <<HTML;
-                </div>
-HTML
+    my @lines=  <IN>;
+    my @columnas=split("\\|",$lines[0]);
+                
     close (IN);
+    return @columnas;
 }
 
 
