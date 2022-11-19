@@ -22,7 +22,7 @@ my $busqueda=$q->param("busqueda");
 my $opcion=$q->param("opcion");
 my $expresion;
 my @cabeceras;
-
+my $encontrado;
 
 @cabeceras=obtenerCabecera();
 
@@ -71,7 +71,8 @@ sub imprimirResultados{
     my @columnas;
     open(IN,"UniversidadesLicenciadas.csv") or die"ERROR";
     while(my $line = <IN>){
-             if($line =~ /$expresion/){   #([^\|]+)
+             if($line =~ /$expresion/){   
+                $encontrado=1;
                 @columnas=split("\\|",$line);
                 print <<HTML;
                     <div class="contenedor-resultados">
