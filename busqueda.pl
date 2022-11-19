@@ -28,14 +28,17 @@ if($opcion eq "Nombre"){
     $expresion=generadorExpresionRegular(2,$busqueda);
     imprimirResultados($expresion);
 }elsif($opcion eq "Periodo"){
+    imprimirCabecera();
     $expresion=generadorExpresionRegular(5,$busqueda);
     imprimirResultados($expresion);
 
 }elsif($opcion eq "DepLocal"){
+    imprimirCabecera();
     $expresion=generadorExpresionRegular(11,$busqueda);
     imprimirResultados($expresion);
     
 }elsif($opcion eq "DenoPrograma"){
+    imprimirCabecera();
     $expresion=generadorExpresionRegular(17,$busqueda);
     imprimirResultados($expresion);
     
