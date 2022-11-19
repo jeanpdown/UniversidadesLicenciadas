@@ -20,12 +20,12 @@ HTML
 my $q =CGI->new;
 my $busqueda=$q->param("busqueda");
 my $opcion=$q->param("opcion");
+my $expresion;
 
-generadorExpresionRegular(2,$busqueda);
 
 if($opcion eq "Nombre"){
-    
-    #imprimirResultados(1,$busqueda);
+    $expresion=generadorExpresionRegular(2,$busqueda);
+    imprimirResultados($expresion);
 }elsif($opcion eq "Periodo"){
 
 
@@ -41,17 +41,16 @@ if($opcion eq "Nombre"){
 
 
 sub imprimirResultados{
-    my $columna=$_[0];
+    my $expresion=$_[0];
     
-    # print "la busqueda es $busq";
-    # open(IN,"UniversidadesLicenciadas.csv") or die"ERROR";
-
-    #     while(my $line = <IN>){
-    #         if($line =~ /^([^\|]+)\|(.*$busq.*)\|(.+)/){   #([^\|]+)
-    #             print $line;
-    #         }
-    #     }
-    # close (IN);
+    open(IN,"UniversidadesLicenciadas.csv") or die"ERROR";
+    print "expre $expresion\n";
+    while(my $line = <IN>){
+             if($line =~ /$expresion/){   #([^\|]+)
+                 print $line;
+             }
+         }
+     close (IN);
 }
 
 sub generadorExpresionRegular{
@@ -60,12 +59,11 @@ sub generadorExpresionRegular{
     my $expresion="^";
     
     for(my $i=1;$i<$columna;$i++){
-        $expresion.="([^\|]+)\|";
+        $expresion.="([^\\|]+)\\|";
 
     }
     
-    $expresion.="(.*$busq.*)\|(.+)/";
-    print "expre $expresion\n";
+    $expresion.="(.*$busq.*)\\|(.+)";
 
     return $expresion;
 }
