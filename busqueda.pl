@@ -24,21 +24,29 @@ my $expresion;
 
 
 if($opcion eq "Nombre"){
+    imprimirCabezera();
     $expresion=generadorExpresionRegular(2,$busqueda);
     imprimirResultados($expresion);
 }elsif($opcion eq "Periodo"){
-
+    $expresion=generadorExpresionRegular(2,$busqueda);
+    imprimirResultados($expresion);
 
 }elsif($opcion eq "DepLocal"){
-
+    $expresion=generadorExpresionRegular(2,$busqueda);
+    imprimirResultados($expresion);
     
 }elsif($opcion eq "DenoPrograma"){
-
+    $expresion=generadorExpresionRegular(2,$busqueda);
+    imprimirResultados($expresion);
     
 }else{
 
 }
-
+sub imprimirCabezera{
+    open(IN,"UniversidadesLicenciadas.csv") or die"ERROR";
+    print <IN>;
+     close (IN);
+}
 
 sub imprimirResultados{
     my $expresion=$_[0];
