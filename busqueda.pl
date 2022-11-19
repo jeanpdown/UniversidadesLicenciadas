@@ -4,7 +4,7 @@ use CGI;
 use warnings;
 use utf8;
 
-print "Content-type: text/html\n\n"
+print "Content-type: text/html\n\n";
 print <<HTML;
 <!DOCTYPE html>
 <html>
