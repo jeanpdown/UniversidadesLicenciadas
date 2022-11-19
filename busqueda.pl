@@ -21,6 +21,13 @@ my $q =CGI->new;
 my $busqueda=$q->param("busqueda");
 my $opcion=$q->param("opcion");
 
+if($opcion eq "Nombre Universidad"){
+    imprimirResultados(2,$busqueda);
+}
+
+print "opcion :$opcion\n";
+print "busqueda:$busqueda\n";
+
 sub imprimirResultados{
     my $columna=$_[0];
     my $busq=$_[1];
