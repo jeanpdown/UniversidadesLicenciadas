@@ -24,7 +24,9 @@ my $expresion;
 my @cabeceras;
 my $encontrado;
 
+
 @cabeceras=obtenerCabecera();
+
 
 $busqueda = uc $busqueda;
 
@@ -58,7 +60,7 @@ if(!defined($encontrado)){
 
 
 sub obtenerCabecera{
-    open(IN,"UniversidadesLicenciadas.csv") or die"ERROR";
+    open(IN,"../UniversidadesLicenciadas.csv") or die"ERROR";
 
     my @lines=  <IN>;
     my @columnas=split("\\|",$lines[0]);
@@ -73,7 +75,7 @@ sub obtenerCabecera{
 sub imprimirResultados{
     my $expresion=$_[0];
     my @columnas;
-    open(IN,"UniversidadesLicenciadas.csv") or die"ERROR";
+    open(IN,"../UniversidadesLicenciadas.csv") or die"ERROR";
     while(my $line = <IN>){
 
             $line =~ tr/ÁÉÍÓÚ/AEIOU/;
