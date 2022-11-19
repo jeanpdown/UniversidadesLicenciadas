@@ -17,7 +17,9 @@ print <<HTML;
     <div >
 HTML
 
-
+my $q =CGI->new;
+my $busqueda=$q->param("busqueda");
+my $opcion=$q->param("opcion");
 
 sub imprimirResultados{
     my $columna=$_[0];
