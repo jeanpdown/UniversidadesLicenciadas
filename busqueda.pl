@@ -76,11 +76,11 @@ sub imprimirResultados{
                 print <<HTML;
                     <div class="contenedor-resultados">
 HTML
-                foreach my $element (@columnas){
+                for(my $i=1;$i<23;$i++ ){
                     print <<HTML;
                     <div >
 HTML
-                    print $element;
+                    print "<b>$cabeceras[$i]</b>: $columnas[$i]";
                     print <<HTML;
                     </div>
 HTML

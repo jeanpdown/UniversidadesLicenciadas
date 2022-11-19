@@ -4,8 +4,11 @@ body{
 }
 .contenedor-busqueda{
     width: 200vw;
-
+    display: grid;
+    grid-template-columns: repeat(auto-fill,minmax(500px,1fr));
+    gap: 30px;
 }
 .contenedor-resultados{
     border-bottom: 2px solid black;
+    border-right: 2px solid black;
 }
