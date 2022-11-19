@@ -11,4 +11,5 @@ body{
 .contenedor-resultados{
     border-bottom: 2px solid black;
     border-right: 2px solid black;
+    box-shadow: 13px 13px 12px #000;
 }
