@@ -51,7 +51,7 @@ body{
 }
 video{
     position: fixed;
-    width: 100vw;
+    width: 102vw;
     opacity: 0.1;
     z-index: -1;
 }
