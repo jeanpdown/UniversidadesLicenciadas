@@ -86,7 +86,7 @@ sub imprimirResultados{
                 print <<HTML;
                     <div class="contenedor-resultados">
 HTML
-                for(my $i=1;$i<23;$i++ ){
+                for(my $i=0;$i<23;$i++ ){
                     print <<HTML;
                     <div >
 HTML
